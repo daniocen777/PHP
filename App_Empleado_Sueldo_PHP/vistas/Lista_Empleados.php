@@ -12,14 +12,9 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<script type="text/javascript" language="javasript" src="../js/Funciones.js"></script>
 </head>
-<body onload="ListaEmpleados('')">
+<body>
 	<div class="container">
-		<div class="form-group">
-			<label for="buscar" class="col-lg-3 control-label">Nombre</label>
-			<div class="col-lg-9">
-				<input type="text" name="buscar" class="form-control" placeholder="Coloque un apellido" id="buscar" onkeyup="ListaEmpleados();" required />	
-			</div>
-		</div>
+		
 
 		<div class="table-responsive">
 			<table class="table table-striped table table-hover table table-condensed">

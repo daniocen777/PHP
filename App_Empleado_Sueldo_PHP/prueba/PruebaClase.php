@@ -1,8 +1,8 @@
 <?php 
-	require_once 'Clase.php';
-	require_once '../modelo/m_Persona.php';
-	require_once '../modelo/m_Area.php';
-	require_once '../dao/EmpleadoDao.php';
+	//require_once 'Clase.php';
+	//require_once '../modelo/m_Persona.php';
+	//require_once '../modelo/m_Area.php';
+	//require_once '../dao/EmpleadoDao.php';
 	//require_once '../modelo/m_Condicion.php';
 	//require_once '../modelo/m_Empleado.php';
 
@@ -34,7 +34,11 @@
 	//$arreglo = array('pedro', 'luis', 'mario');
 	//echo sizeof($arreglo);
 
-	$empleadoDao = new EmpleadoDao();
-	$registro = $empleadoDao->ListarEmpleado();
-	echo sizeof($registro);
+	//$empleadoDao = new EmpleadoDao();
+	//$registro = $empleadoDao->ListarEmpleado();
+	//echo sizeof($registro);
+
+	$pila = array("naranja", "plátano");
+	array_push($pila, "manzana", "arándano");
+	print_r($pila);
  ?>

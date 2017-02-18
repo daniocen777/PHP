@@ -84,5 +84,50 @@
             return $this->empleado;
             Conexion::Conectar()->close();
         }
+
+        public function CapturarEmpleadoJson($id)
+        {
+            $query = "SELECT * FROM v_Empleados WHERE IdEmpleado = '$id'";
+            $resultado = Conexion::Conectar()->query($query);
+            if ($registro = $resultado->fetch_assoc())
+            {
+                $this->empleado[] = $registro;
+                return $this->empleado;
+            }
+            else
+            {
+                echo '<script type="text/javascript">alert("Este código no existe"); window.location="../vistas/Lista_Empleados.php";</script>';
+            }
+            Conexion::Conectar()->close();
+        }
+
+         public function ListarEmpleadoJson($valor)
+        {
+            $query = "SELECT * FROM v_Empleados WHERE apPaterno LIKE '%".$valor."%'";
+            $resultado = Conexion::Conectar()->query($query);
+            while ($registro = $resultado->fetch_assoc()) 
+            {
+                $this->empleado[] = $registro;
+                
+            }
+            return $this->empleado;
+            $resultado->free();
+             Conexion::Conectar()->close();
+        }
+
+        // Listar todos los apellidos paternos
+         public function ListarEmpleadoPorApellido()
+        {
+            $query = "SELECT apPaterno FROM v_Empleados ORDER BY idEmpleado";
+            $resultado = Conexion::Conectar()->query($query);
+            while ($registro = $resultado->fetch_assoc()) 
+            {
+                $this->empleado[] = $registro;
+                
+            }
+            return $this->empleado;
+            $resultado->free();
+             Conexion::Conectar()->close();
+        } 
 	}
  ?>
