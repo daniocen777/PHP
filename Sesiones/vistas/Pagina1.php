@@ -7,6 +7,8 @@
 <body>
 	<h1>PÁGINA 1</h1>
 	<?php 
+		// SESIONES EN PHP
+		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		// Iniciar la sesión
 		session_start();
 		// Si existe la sesión
