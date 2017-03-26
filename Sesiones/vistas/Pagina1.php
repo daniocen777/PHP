@@ -13,7 +13,7 @@
 		if(isset($_SESSION["u_usuario"]))
 		{
 			echo "Sesión exitosa <br>";
-			echo "<a href='cerrar.php'>Cerrar</a>";
+			echo "<a href='cerrar.php'>Cerrar</a> <br>";
 		}
 		else
 		{
@@ -22,5 +22,6 @@
 		}
 
 	 ?>
+	 <a href="Pagina2.php">Ir a página 3</a>
 </body>
 </html>
